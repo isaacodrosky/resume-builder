@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+        Student: Isaac Odrosky
+        Course: WEB-115.0004
+        File name: finalProject.html
+        Assignment: Final Project - JavaScript Resume Builder
+     -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>WEB-115 Final Project</title>
+  </head>
+  <body>
+    
+    <div class="container">
+      <!-- Page banner -->
+      <header>
+        <h1>Build Your Resume</h1>
+        <h2>Isaac Odrosky | WEB-115.0004</h2>
+        <p>
+          Fill out the form below with your information to create your custom,
+          professional resume
+        </p>
+      </header>
+      <!-- Form -->
+      <main>
+        <form action="" method="POST">
+            <!-- Personal Information -->
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" name="fullname" id="fullname" required />
+            <br />
+            <p class="required caption">Required</p>
+            <br />
+            <label for="currtitle">Current Job Title:</label>
+            <input type="text" name="currtitle" id="currtitle" />
+            <br />
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+            <br />
+            <p class="required caption">Required</p>
+            <br />
+            <label for="phone">Phone:</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            />
+            <br />
+            <p class="caption">Format: 123-456-7890</p>
+            <br />
+            <label for="city">City:</label>
+            <input type="text" name="city" id="city" />
+            <br />
+            <label for="state">State:</label>
+            <input type="text" name="state" id="state" />
+            <br />
+            <label for="portfolio">Portfolio Link:</label>
+            <input type="url" name="portfolio" id="portfolio" />
+            <br />
+            <label for="headline">Headline:</label>
+            <p class="caption">
+              Add a brief description of your skill set
+              and professional attributes (one sentence or less)
+            </p>
+            <textarea name="headline" id="headline" rows="3"></textarea>
+            <!-- Professional Skills -->
+          </fieldset>
+          <fieldset>
+            <legend>Professional Skills</legend>
+            <p class="caption">
+              List professional skills such as customer service or project
+              management
+            </p>
+            <br />
+            <label for="profskill1">Skill 1:</label>
+            <input type="text" name="profskill1" id="profskill1" />
+            <br />
+            <label for="profskill2">Skill 2:</label>
+            <input type="text" name="profskill2" id="profskill2" />
+            <br />
+            <label for="profskill3">Skill 3:</label>
+            <input type="text" name="profskill3" id="profskill3" />
+          </fieldset>
+          <!-- Technical Skills -->
+          <fieldset>
+            <legend>Technical Skills</legend>
+            <p class="caption">
+              List technical skills such as programming languages or software
+              proficiency
+            </p>
+            <br />
+            <label for="techskill1">Skill 1:</label>
+            <input type="text" name="techskill1" id="techskill1" />
+            <br />
+            <label for="techskill2">Skill 2:</label>
+            <input type="text" name="techskill2" id="techskill2" />
+            <br />
+            <label for="techskill3">Skill 3:</label>
+            <input type="text" name="techskill3" id="techskill3" />
+          </fieldset>
+          <!-- Employment Experience -->
+          <fieldset>
+            <legend>Employment Experience</legend>
+            <p class="caption">
+              List details of your three most recent jobs in order of most to
+              least recent
+            </p>
+            <br />
+            <!-- Job 1 -->
+            <h2 class="job-header">Job 1</h2>
+            <label for="jobtitle1">Job Title:</label>
+            <input type="text" name="jobtitle1" id="jobtitle1" />
+            <br />
+            <label for="employer1">Employer:</label>
+            <input type="text" name="employer1" id="employer1" />
+            <br />
+            <label for="begindate1">Begin Date:</label>
+            <input type="date" name="begindate1" id="begindate1" />
+            <br />
+            <label for="enddate1">End Date:</label>
+            <input type="date" name="enddate1" id="enddate1" />
+            <br />
+            <label for="jobdesc1">Job Description/Responsibilities:</label>
+            <br />
+            <textarea name="jobdesc1" id="jobdesc1" rows="3"></textarea>
+            <br />
+            <!-- Job 2 -->
+            <h2 class="job-header">Job 2</h2>
+            <label for="jobtitle2">Job Title:</label>
+            <input type="text" name="jobtitle2" id="jobtitle2" />
+            <br />
+            <label for="employer2">Employer:</label>
+            <input type="text" name="employer2" id="employer2" />
+            <br />
+            <label for="begindate2">Begin Date:</label>
+            <input type="date" name="begindate2" id="begindate2" />
+            <br />
+            <label for="enddate2">End Date:</label>
+            <input type="date" name="enddate2" id="enddate2" />
+            <br />
+            <label for="jobdesc2">Job Description/Responsibilities:</label>
+            <br />
+            <textarea name="jobdesc2" id="jobdesc2" rows="3"></textarea>
+            <br />
+            <!-- Job 3 -->
+            <h2 class="job-header">Job 3</h2>
+            <label for="jobtitle3">Job Title:</label>
+            <input type="text" name="jobtitle3" id="jobtitle3" />
+            <br />
+            <label for="employer3">Employer:</label>
+            <input type="text" name="employer3" id="employer3" />
+            <br />
+            <label for="begindate3">Begin Date:</label>
+            <input type="date" name="begindate3" id="begindate3" />
+            <br />
+            <label for="enddate3">End Date:</label>
+            <input type="date" name="enddate3" id="enddate3" />
+            <br />
+            <label for="jobdesc3">Job Description/Responsibilities:</label>
+            <br />
+            <textarea name="jobdesc3" id="jobdesc3" rows="3"></textarea>
+          </fieldset>
+          <!-- References -->
+          <fieldset>
+            <legend>Professional References</legend>
+            <label for="refs"
+              >Add names and contact information for references:</label
+            >
+            <br />
+            <textarea name="refs" id="refs" rows="3"></textarea>
+          </fieldset>
+          <!-- Submit btn -->
+          <button id="submit">Create Resume</button>
+        </form>
+      </main>
+    </div>
+    <script src="projectJS.js"></script>
+  </body>
+</html>

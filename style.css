@@ -1,0 +1,163 @@
+/* 
+    Student: Isaac Odrosky
+    Course: WEB-115.0004
+    File name: style.css
+    Assignment: Final Project - JavaScript Resume Builder
+*/
+
+/* ------- Global Styles ------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* fonts */
+  --serif: "Roboto Slab", serif;
+  --sans-serif: "Open Sans", sans-serif;
+  /* colors */
+  --blue: #3a6ba6;
+  --lt-blue: #95b3da;
+  --grey: #454545;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background-color: var(--blue);
+  font-family: var(--sans-serif);
+}
+
+.container {
+  max-width: 85%;
+  margin: 5% auto;
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px var(--shadow);
+  background-color: #fff;
+  color: var(--grey);
+}
+
+/* ------- Header Styles ------- */
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--serif);
+  font-size: 2.8rem;
+}
+
+header h2 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  padding-bottom: 7px;
+  font-style: italic;
+}
+
+/* ------- Form Styles ------- */
+form {
+  margin: 10px auto;
+}
+
+fieldset {
+  max-width: 100%;
+  padding: 10px 15px;
+  padding-bottom: 20px;
+  margin: 20px auto;
+  border: 3px solid var(--blue);
+}
+
+legend {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  padding: 0 10px;
+  color: var(--blue);
+}
+
+label {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+input {
+  max-width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid var(--blue);
+  padding: 2px 5px 2px 5px;
+  font-family: var(--sans-serif);
+  font-size: 1.1rem;
+}
+
+.caption {
+  display: inline-block;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* if field filled out, color changes to green */
+.required {
+  color: red;
+}
+
+textarea {
+  margin-top: 10px;
+  border: 3px solid var(--blue);
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.job-header {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+button {
+  width: 100%;
+  font-family: var(--sans-serif);
+  font-weight: 700;
+  font-size: 1.2rem;
+  background-color: var(--blue);
+  color: #fff;
+  border: 3px solid var(--blue);
+  border-radius: 100vh;
+  padding: 10px;
+  box-shadow: 1px 1px 3px var(--shadow);
+}
+
+button:hover {
+  background-color: #fff;
+  color: var(--blue);
+}
+
+button:active {
+  box-shadow: 3px 3px 5px var(--shadow);
+}
+
+/* ------- Responsive Styles ------- */
+
+/* Tablet + Laptop */
+@media only screen and (min-width: 700px) {
+  .container {
+    max-width: 70%;
+    margin: 5% auto;
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 60%;
+    margin: 3% auto;
+    padding: 3%;
+  }
+}
