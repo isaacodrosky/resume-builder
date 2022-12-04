@@ -24,8 +24,11 @@
 }
 
 body {
-  background-color: var(--blue);
   font-family: var(--sans-serif);
+}
+
+.form-body {
+  background-color: var(--blue);
 }
 
 .container {
