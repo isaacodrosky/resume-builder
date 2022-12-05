@@ -34,6 +34,7 @@ const refs = form.elements['refs'];
 
 
 
+
 let createResume = function createResume() {
     let nameVal = fullName.value; // pulls user value from form elements 
     let currTitleVal = currTitle.value;
@@ -100,6 +101,16 @@ let createResume = function createResume() {
     resumeWindow.document.write(resumeFormat);
 }
 
-
-// when submit button clicked, call createResume function
-document.getElementById('submit').addEventListener('click', createResume);
+// email validation
+function emailCheck(){
+    let emailValue = document.getElementById('email').value;
+    if(emailValue != ""){
+        // if email is not empty, run create resume funct on submit click
+        document.getElementById('submit').addEventListener('click', createResume());
+        return true;
+    }
+    else{
+        return false;
+    } 
+   
+}

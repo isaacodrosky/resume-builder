@@ -33,7 +33,7 @@
       </header>
       <!-- Form -->
       <main>
-        <form id="resumeform">
+        <form id="resumeform" onsubmit="emailCheck()">
             <!-- Personal Information -->
           <fieldset>
             <legend>Personal Information</legend>
@@ -53,10 +53,7 @@
               type="tel"
               name="phone"
               id="phone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             />
-            <br />
-            <p class="caption">Format: 123-456-7890</p>
             <br />
             <label for="city">City:</label>
             <input type="text" name="city" id="city" />
@@ -65,7 +62,7 @@
             <input type="text" name="state" id="state" />
             <br />
             <label for="portfolio">Portfolio Link:</label>
-            <input type="url" name="portfolio" id="portfolio" />
+            <input type="text" name="portfolio" id="portfolio" />
             <br />
             <label for="headline">Headline:</label>
             <p class="caption">
@@ -179,9 +176,10 @@
             <br />
             <textarea name="refs" id="refs" rows="3"></textarea>
           </fieldset>  
+          <!-- Submit btn -->
+        <button id="submit"> Create Resume </button>
         </form>
-        <!-- Submit btn -->
-        <button id="submit">Create Resume</button>
+        
       </main>
     </div>
     <script src="projectJS.js"></script>
