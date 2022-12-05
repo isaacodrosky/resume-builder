@@ -1,16 +1,6 @@
-// **************************
-// PSEUDOCODE:
-// XX 1. declare/init form element consts
-// XX 2. create funct for window open
-// XX 3. declare/init var for [formelements].value
-// 4. document.write() each line of html with values concatenated
-// XX 5. add submit btn event listener, run window open funct when submit btn clicked
-// **************************
-
-// form itself
 const form = document.getElementById('resumeform');
 
-// form elements
+// form inputs
 const fullName = form.elements['fullname'];
 const currTitle = form.elements['currtitle'];
 const email = form.elements['email'];
@@ -77,11 +67,36 @@ let createResume = function createResume() {
     let refsVal = refs.value;
 
     // build pop-up resume structure
-    resumeFormat = ("<html>\n<head>\n<title>Welcome</title>\n<link rel=\"stylesheet\" href=\"style.css\"/>\n</head>\n<body>\n<h1>" + nameVal + "</h1>");
+    let resumeFormat =
+        "<html><head><title>Resume</title><link rel=\"stylesheet\" href=\"style.css\" /><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" /><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin /><link href=\"https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Open+Sans:wght@400;700&display=swap\" rel=\"stylesheet\" /></head><body>";
 
+    resumeFormat += "<div class=\"resume-container\"><header class=\"resume-header\"><h1>" + nameVal + "</h1><h2>" + currTitleVal + "</h2>";
 
-    resumeFormat += ("</body>\n</html>")
-    resumeWindow = window.open('about:blank','myPop','width=400,height=200,left=200,top=200');
+    resumeFormat += "<p>" + emailVal + " | " + phoneVal + "</p><p>" + cityVal + ", " + stateVal + " | " + portfolioVal + "</p><p>" + headlineVal + "</p></header>";
+
+    resumeFormat += "<div class=\"skill-container\"><div class=\"pro-skills\"><h2>Professional Skills</h2>";
+
+    resumeFormat += "<ul><li>" + profSkill1Val + "</li><li>" + profSkill2Val + "</li><li>" + profSkill3Val + "</li></ul></div>";
+
+    resumeFormat += "<div class=\"tech-skills\"><h2>Technical Skills</h2>";
+
+    resumeFormat += "<ul><li>" + techSkill1Val + "</li><li>" + techSkill2Val + "</li><li>" + techSkill3Val + "</li></ul></div></div>";
+
+    resumeFormat += "<div class=\"emp-container\"><h2>Employment Experience</h2><div id=\"job1\"><div class=\"emp-header\">";
+    
+    resumeFormat += "<h3>" + jobTitle1Val + "</h3><p>" + beginDate1Val + " - " + endDate1Val + "</p></div><p>" + employer1Val + "</p><p>" + jobDesc1Val + "</p></div>";
+
+    resumeFormat += "<div id=\"job2\"><div class=\"emp-header\"><h3>" + jobTitle2Val + "</h3><p>" + beginDate2Val + " - " + endDate2Val + "</p></div><p>" + employer2Val + "</p><p>" + jobDesc2Val + "</p></div>";
+
+    resumeFormat += "<div id=\"job3\"><div class=\"emp-header\"><h3>" + jobTitle3Val + "</h3><p>" + beginDate3Val + " - " + endDate3Val + "</p></div><p>" + employer3Val + "</p><p>" + jobDesc3Val + "</p></div></div>";
+
+    resumeFormat += "<div class=\"refs-container\"><h2>References</h2><p>" + refsVal + "</p></div>";
+
+    resumeFormat += "</div></body></html>";
+    
+    // open new window
+    resumeWindow = window.open('about:blank', 'width=800,height=1000,left=0,top=0');
+    // in new window, print resume
     resumeWindow.document.write(resumeFormat);
 }
 
